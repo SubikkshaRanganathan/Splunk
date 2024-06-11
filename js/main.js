@@ -74,6 +74,44 @@
         loop: true,
         responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
     });
-  
+// Modal functionality
+    // Get the modal
+    var modal = document.getElementById('contactModal');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+
+    // Function to open the modal
+    window.openModal = function() {
+        modal.style.display = 'block';
+    }
+
+    // Function to close the modal
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // Close the modal if the user clicks outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var name = $('#name').val();
+        var userEmail = $('#userEmail').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        var mailtoLink = `mailto:recipient-email@gmail.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(userEmail)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
+        $('#contactModal').modal('hide');
+    });
+    
+
 })(jQuery);
 
