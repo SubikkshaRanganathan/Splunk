@@ -74,44 +74,83 @@
         loop: true,
         responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
     });
-// Modal functionality
-    // Get the modal
-    var modal = document.getElementById('contactModal');
 
+    var modal = $("#contactModal");
+
+    // Get the button that opens the modal
+    var contactLink = $("#contact-link");
+    var contact = $("#cont");
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName('close')[0];
+    var span = $(".close");
 
-    // Function to open the modal
-    window.openModal = function() {
-        modal.style.display = 'block';
-    }
+    // Get the send email button
+    var sendEmailButton = $("#sendEmailButton");
 
-    // Function to close the modal
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
+    // When the user clicks the button, open the modal 
+    contactLink.click(function() {
+        modal.css("display", "block");
+        $("#contactForm")[0].reset();
+    });
+    contact.click(function() {
+        modal.css("display", "block");
+        $("#contactForm")[0].reset();
+    });
+    // When the user clicks on <span> (x), close the modal
+    span.click(function() {
+        modal.css("display", "none");
+    });
 
-    // Close the modal if the user clicks outside of the modal content
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+    // When the user clicks anywhere outside of the modal, close it
+    $(window).click(function(event) {
+        if (event.target == modal[0]) {
+            modal.css("display", "none");
         }
-    }
-    
-    $('#contactForm').on('submit', function (e) {
-        e.preventDefault();
+    });
 
-        var name = $('#name').val();
-        var userEmail = $('#userEmail').val();
-        var subject = $('#subject').val();
-        var message = $('#message').val();
-
-        var mailtoLink = `mailto:recipient-email@gmail.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(userEmail)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
-
+    // When the user clicks the send email button, open mail client
+    sendEmailButton.click(function() {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var subject = $("#subject").val();
+        var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent("\n"+"\n"+  "Regards,\n" + name + "\n");
         window.location.href = mailtoLink;
-        $('#contactModal').modal('hide');
     });
     
+    function openGoogleMapsModal() {
+        $("#googleMapsModal").css("display", "block");
+    }
+
+    // Function to close Google Maps modal
+    function closeGoogleMapsModal() {
+        $("#googleMapsModal").css("display", "none");
+    }
+
+    // When Blog link is clicked, open modal
+    $(".nav-link.blog-link,#loc").click(function(e) {
+        e.preventDefault(); // Prevent default link behavior (navigating to a new page)
+        openGoogleMapsModal();
+    });
+
+
+    // Close modal when close button (X) is clicked
+    $(".close").click(function() {
+        closeGoogleMapsModal();
+    });
+
+    // Close modal when clicking outside the modal content
+    $(window).click(function(event) {
+        var modal = $("#googleMapsModal");
+        if (event.target === modal[0]) {
+            closeGoogleMapsModal();
+        }
+    });
+
+    // Close modal when ESC key is pressed
+    $(document).keyup(function(event) {
+        if (event.key === "Escape") {
+            closeGoogleMapsModal();
+        }
+    });
 
 })(jQuery);
 

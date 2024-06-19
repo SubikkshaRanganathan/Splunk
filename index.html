@@ -39,18 +39,46 @@
                         <div class="navbar-nav ml-auto">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="#about" class="nav-item nav-link">About</a>
-                            <a href="#" class="nav-item nav-link">Solution</a>
-                            <a href="#contact" class="nav-item nav-link">Contact</a>
-                            <a href="#" class="nav-item nav-link">Blog</a>
+                            <a href="#service" class="nav-item nav-link">Solution</a>
+                            <a href="#" class="nav-item nav-link" id="contact-link">Contact</a>
+                            <a href="#" class="nav-item nav-link blog-link">Location</a>
+
+
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
         <!-- Nav End -->
+<!-- Contact Modal Start -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Subject:</label><br>
+            <input type="text" id="subject" name="subject" required><br><br>
+            <button type="button" id="sendEmailButton">Send Email</button>
+        </form>
+    </div>
+</div>
+<!-- Contact Modal End -->
+
+<!-- Google Maps Modal -->
+<div id="googleMapsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.0013471986437!2d-79.2548597!3d43.7770355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a9a225d579%3A0x907c46d731f3d67!2s100%20Consilium%20Pl%20Suite%20%23%20200%2C%20Scarborough%2C%20ON%20M1H%203E3%2C%20Canada!5e0!3m2!1sen!2sca!4v1624068584415!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
 
         <!-- Header Start-->
-        <div class="header">
+        <div class="header" id="home">
             <div id="header-slider" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
@@ -135,7 +163,7 @@ Based in Toronto, Canada, providing software solutions in various verticals for 
         <!-- About End -->
 
         <!-- Service Start -->
-        <div class="service">
+        <div class="service" id="service">
             <div class="container">
                 <div class="section-header">
                     <h2>Services</h2>
@@ -211,76 +239,6 @@ Based in Toronto, Canada, providing software solutions in various verticals for 
             </div>
         </div>
         <!-- Service End -->    
-        <!-- Clients Start -->
-        <div class="clients">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Clients</h2>
-                </div>
-
-                <div class="owl-carousel clients-carousel">
-                    <img src="img/client-1.png" alt="Client Logo">
-                    <img src="img/client-2.png" alt="Client Logo">
-                    <img src="img/client-3.png" alt="Client Logo">
-                    <img src="img/client-4.png" alt="Client Logo">
-                    <img src="img/client-5.png" alt="Client Logo">
-                    <img src="img/client-6.jpg" alt="Client Logo">
-                    <img src="img/client-7.png" alt="Client Logo">
-                    <img src="img/client-8.png" alt="Client Logo">
-                    <img src="img/client-9.png" alt="Client Logo">
-                    <img src="img/client-10.png" alt="Client Logo">
-                    <img src="img/client-11.png" alt="Client Logo">
-                </div>
-
-            </div>
-        </div> 
-        <!-- Clients End -->
-
-       <!-- Contact Modal Structure -->
-<div id="contactModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <!-- Contact Start -->
-        <div class="contact" id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form">
-                            <form class="contactForm">
-                                <div class="form-row">
-                                    <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Your Name" />
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                        <input type="email" class="form-control" placeholder="Your Email" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject" />
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                                </div>
-                                <div><button class="btn" type="submit">Send Message</button></div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361250.667320687!2d-113.75533773453304!3d36.24128894212527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1574923227698!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-    </div>
-</div>
-
-
         <!-- Footer Start -->
         <div class="footer">
             <div class="footer-top">
@@ -289,10 +247,10 @@ Based in Toronto, Canada, providing software solutions in various verticals for 
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">About</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Contact</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">Blog</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#home">Home</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#" id="cont">Contact</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#" id="loc">Location</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & condition</a></li>
                                 <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
                             </ul>
@@ -301,16 +259,16 @@ Based in Toronto, Canada, providing software solutions in various verticals for 
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Solutions</h4>
                             <ul>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">SPLUNK SERVICES AND MAINTAINANCE</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">SPLUNK APP DEVELOPMENT</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">DATA ANALYTICS AND PREDICTIVE ANALYSIS</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">ELASTICSEARCH (ELK) SERVICES & LOG ANALYTICS</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">AWS & SPLUNK INTEGRATION</a></li>
-                                <li><i class="ion-ios-arrow-forward"></i> <a href="#">SPLUNK WIZARD</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">SPLUNK SERVICES AND MAINTAINANCE</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">SPLUNK APP DEVELOPMENT</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">DATA ANALYTICS AND PREDICTIVE ANALYSIS</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">ELASTICSEARCH (ELK) SERVICES & LOG ANALYTICS</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">AWS & SPLUNK INTEGRATION</a></li>
+                                <li><i class="ion-ios-arrow-forward"></i> <a href="#service">SPLUNK WIZARD</a></li>
                             </ul>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 footer-contact">
+                     <!--   <div class="col-lg-3 col-md-6 footer-contact" id="cont">
                             <h4>Contact Us</h4>
                             <p>
                                 <strong>Email:</strong> 
@@ -318,6 +276,16 @@ Based in Toronto, Canada, providing software solutions in various verticals for 
                             </p>
                         </div>
                         
+                        -->
+
+                        <div class="col-lg-3 col-md-6 footer-contact" id="cont">
+                            <h4>Contact Us</h4>
+                            <p>
+                                <strong>Email:</strong> 
+                                Contactus@deltainfosec.ca
+                            </p>
+                            <button class="contact-button"><a href="mailto:Contactus@deltainfosec.ca">Get in touch</a></button>
+                        </div>
                         
                     </div>
                 </div>

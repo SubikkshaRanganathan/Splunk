@@ -48,6 +48,120 @@ h6 {
     margin-top: 100px;
 }
 
+.contact-button {
+    background-color: #e3e9ef;
+    color: blue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #9cb8d6;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #2a2929;
+    width: 100%; /* 80% width of viewport */
+    max-width: 600px; /* Max width */
+    position: relative;
+    text-align: left; /* Center align content */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Form styles */
+#contactForm {
+    margin-top: 20px;
+    text-align: left; /* Align form elements to the left */
+}
+
+#contactForm h2 {
+    text-align: center; /* Center align the "Contact Us" header */
+    margin-bottom: 20px;
+}
+
+#contactForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left; /* Align labels to the left */
+}
+
+#contactForm input[type=text],
+#contactForm input[type=email],
+#contactForm input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#contactForm input[type=submit],
+#sendEmailButton {
+    background-color: #4F84C4; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block; /* Ensure button stays inline */
+}
+
+#contactForm input[type=submit]:hover,
+#sendEmailButton:hover {
+    background-color: #1f6ece;
+}
+
+#contactForm input[type=submit]:focus,
+#sendEmailButton:focus {
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
 
 
 /**************************************/
