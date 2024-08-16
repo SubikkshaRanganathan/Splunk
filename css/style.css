@@ -1364,7 +1364,7 @@ body {
     margin-bottom: 50px;
 }
 
-.service-item {
+.service-item1 {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
@@ -1373,17 +1373,17 @@ body {
     text-align: center;
 }
 
-.service-item img {
+.service-item1 img {
     max-width: 100px;
     margin-bottom: 20px;
 }
 
-.service-item h3 {
+.service-item1 h3 {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.service-item p {
+.service-item1 p {
     font-size: 16px;
     color: #555;
 }
