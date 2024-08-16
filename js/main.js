@@ -9,7 +9,32 @@
             $('#nav').removeClass('nav-sticky');
         }
     });
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[data-target]');
     
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    function navigateTo(pageName, url) {
+        // Encode the page name for use in the URL
+        const encodedName = encodeURIComponent(pageName);
+        
+        // Update the URL with the new page name
+        window.location.href = `${encodedName}`;
+    }
+        
     
     // Dropdown on mouse hover
     $(document).ready(function () {

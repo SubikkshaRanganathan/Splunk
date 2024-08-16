@@ -2,7 +2,7 @@
 /************ General CSS *************/
 /**************************************/
 body {
-    color: #757575;
+    color: #3b3b3b;
     font-family: 'Raleway', sans-serif;
     background: #ffffff;
 }
@@ -15,13 +15,13 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #666666;
+    color: #000000;
     outline: none;
     text-decoration: none;
 }
 
 p {
-    color: #757575;
+    color: #393939;
     padding: 0;
     margin: 0 0 15px 0;
 }
@@ -33,7 +33,7 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    color: #888888;
+    color: #4e4e4e;
     margin: 0 0 15px 0;
     padding: 0;
 }
@@ -368,7 +368,7 @@ h6 {
 }
 
 .section-header h2 {
-    color: #666666;
+    color: #3f3f3f;
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
@@ -389,7 +389,7 @@ h6 {
 }
 
 .section-header p {
-    font-size: 22px;
+    font-size: 22px;color: #000000;
     font-weight: 300;
     text-align: center;
     margin: 0;
@@ -402,7 +402,7 @@ h6 {
 /**************************************/
 .about,
 .single {
-    position: relative;
+    position: left;
     padding: 90px 0 60px 0;
     background: #f2f2f2;
 }
@@ -1326,4 +1326,94 @@ h6 {
     .footer .copyright {
         text-align: left;
     }
+}
+
+/* Main Stylesheet */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.splunk-health-check {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.splunk-health-check h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.splunk-health-check ul {
+    list-style: none;
+    padding: 0;
+}
+
+.splunk-health-check ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.splunk-health-check ul li strong {
+    color: #333;
 }
