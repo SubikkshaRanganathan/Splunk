@@ -103,7 +103,7 @@
     var modal = $("#contactModal");
 
     // Get the button that opens the modal
-    var contactLink = $("#contact-link");
+    /*var contactLink = $("#contact-link");
     var contact = $("#cont");
     // Get the <span> element that closes the modal
     var span = $(".close");
@@ -141,11 +141,11 @@
         var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" + encodeURIComponent(subject) + "&body=" +encodeURIComponent(msg+"\n") + encodeURIComponent("\n"+"\n"+  "Regards,\n" + name + "\n");
         window.location.href = mailtoLink;
     });
-    
+    */
     
 
     // When Blog link is clicked, open modal
-    $(".nav-link.blog-link,#loc").click(function(e) {
+   /* $(".nav-link.blog-link,#loc").click(function(e) {
         e.preventDefault(); // Prevent default link behavior (navigating to a new page)
         openGoogleMapsModal();
     });
@@ -170,6 +170,6 @@
             closeGoogleMapsModal();
         }
     });
-
+*/
 })(jQuery);
 
