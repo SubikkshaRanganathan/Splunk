@@ -137,18 +137,12 @@
         var name = $("#name").val();
         var email = $("#email").val();
         var subject = $("#subject").val();
-        var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent("\n"+"\n"+  "Regards,\n" + name + "\n");
+        var msg=$("#message").val();
+        var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" + encodeURIComponent(subject) + "&body=" +encodeURIComponent(msg+"\n") + encodeURIComponent("\n"+"\n"+  "Regards,\n" + name + "\n");
         window.location.href = mailtoLink;
     });
     
-    function openGoogleMapsModal() {
-        $("#googleMapsModal").css("display", "block");
-    }
-
-    // Function to close Google Maps modal
-    function closeGoogleMapsModal() {
-        $("#googleMapsModal").css("display", "none");
-    }
+    
 
     // When Blog link is clicked, open modal
     $(".nav-link.blog-link,#loc").click(function(e) {
