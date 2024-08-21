@@ -100,13 +100,22 @@
         responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
     });
 
-    sendEmailButton.click(function() {
+    $("#sendEmailButton").click(function() {
         var name = $("#name").val();
         var email = $("#email").val();
         var subject = $("#subject").val();
-        var msg=$("#message").val();
-        var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" + encodeURIComponent(subject) + "&body=" +encodeURIComponent(msg+"\n") + encodeURIComponent("\n"+"\n"+  "Regards,\n" + name + "\n");
-        window.location.href = mailtoLink;
+        var msg = $("#message").val();
+
+        if (name && email && subject && msg) {
+            var mailtoLink = "mailto:Contactus@deltainfosec.ca?subject=" 
+                            + encodeURIComponent(subject) 
+                            + "&body=" 
+                            + encodeURIComponent(msg + "\n\nRegards,\n" + name + "\n");
+
+            window.location.href = mailtoLink;
+        } else {
+            alert("Please fill in all fields before sending the message.");
+        }
     });
 
     // Get the button that opens the modal
