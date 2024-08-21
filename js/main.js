@@ -1,6 +1,12 @@
 (function ($) {
     "use strict";
-    
+    $(window).addEventListener('load', function() {
+        if (window.location.hash) {
+          // Remove the fragment identifier from the URL
+          window.history.replaceState(null, null, window.location.pathname);
+        }
+      });
+      
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
