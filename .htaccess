@@ -1,7 +1,9 @@
 RewriteEngine On
+# Redirect requests for index.html to /home
+RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
+RewriteRule ^$ /home [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)$ $1.html [L]
 
-RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
-RewriteRule ^$ / [R=301,L]
