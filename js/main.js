@@ -1,11 +1,16 @@
 (function ($) {
     "use strict";
-    $(window).addEventListener('load', function() {
-        if (window.location.hash) {
-          // Remove the fragment identifier from the URL
-          window.history.replaceState(null, null, window.location.pathname);
+    window.addEventListener('load', function() {
+        const scrollToSection = localStorage.getItem("scrollTo");
+    
+        if (scrollToSection && document.getElementById(scrollToSection)) {
+            document.getElementById(scrollToSection).scrollIntoView({ behavior: 'smooth' });
+            localStorage.removeItem("scrollTo"); // Clean up after scrolling
         }
-      });
+    });
+    
+    
+    
       
     // Sticky Navbar
     $(window).scroll(function () {
