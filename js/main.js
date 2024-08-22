@@ -9,7 +9,17 @@
         }
     });
     
-    
+    function redirectIndexToHome() {
+    const currentPath = window.location.pathname;
+
+    // Check if the current URL path contains 'index'
+    if (currentPath.includes('index')) {
+        // Construct the new URL
+        const newPath = currentPath.replace('index', 'home');
+        // Redirect to the new URL
+        window.location.replace(newPath);
+    }
+}
     
       
     // Sticky Navbar
@@ -128,7 +138,8 @@
             alert("Please fill in all fields before sending the message.");
         }
     });
-
+    // Call the function on page load
+window.onload = redirectIndexToHome;
     // Get the button that opens the modal
     /*var contactLink = $("#contact-link");
     var contact = $("#cont");
