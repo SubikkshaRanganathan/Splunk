@@ -1,14 +1,10 @@
 RewriteEngine On
 
-# Redirect requests for index.html to /home
-#RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
-#RewriteRule ^index\.html$ /home [R=301,L]
+# Specific redirection rule
+RewriteCond %{REQUEST_URI} ^/index/?$ [NC]
+RewriteRule ^index/?$ /home [R=301,L]
 
-# Rewrite clean URLs to .html files
+# General URL rewriting rule
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)$ $1.html [L]
-
-# Rewrite URLs with 'index' to 'home'
-RewriteCond %{REQUEST_URI} /index [NC]
-RewriteRule ^index$ /home [L,QSA]
