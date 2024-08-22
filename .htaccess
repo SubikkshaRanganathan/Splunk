@@ -1,23 +1,10 @@
 RewriteEngine On
 
-<<<<<<< HEAD
-# Redirect requests for index.html to /home
-RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
-RewriteRule ^index\.html$ / [R=301,L]
-=======
-# Specific redirection rule
-RewriteCond %{REQUEST_URI} ^/index/?$ [NC]
-RewriteRule ^index/?$ /home [R=301,L]
->>>>>>> 0c64f8ed20f05460c2565c61431f3eabc6e18d01
+# Redirect '/contact' to '/index.html#about'
+RewriteRule ^contact/?$ /index.html#about [R=301,L]
 
 # General URL rewriting rule
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)$ $1.html [L]
-<<<<<<< HEAD
 
-# Rewrite URLs with 'index' to 'home'
-#RewriteCond %{REQUEST_URI} /index [NC]
-#RewriteRule ^index$ /home [L,QSA]
-=======
->>>>>>> 0c64f8ed20f05460c2565c61431f3eabc6e18d01
