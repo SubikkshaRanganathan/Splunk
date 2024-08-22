@@ -14,10 +14,11 @@
 
     // Check if the current URL path contains 'index'
     if (currentPath.includes('index')) {
-        // Construct the new URL
+        // Construct the new URL path
         const newPath = currentPath.replace('index', 'home');
-        // Redirect to the new URL
-        window.location.replace(newPath);
+        
+        // Modify the URL in the browser's address bar without reloading the page
+        history.replaceState(null, '', newPath);
     }
 }
     
