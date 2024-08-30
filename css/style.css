@@ -1103,7 +1103,7 @@ h6 {
 .contact .form {
     background: #ffffff;
     padding: 30px;
-    color: #353535;
+    color: #2f2c2c;
 }
 
 .contact .form input,
@@ -1201,7 +1201,7 @@ h6 {
     border: 1px solid #007bff; /* Blue border */
     border-radius: 0.5rem; /* Rounded corners */
     padding: 2rem; /* Padding inside the card */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 0 1rem rgba(65, 63, 63, 0.1); /* Subtle shadow */
 }
 
 /* Styling for the colorful title */
@@ -1216,7 +1216,7 @@ h6 {
 
 /* Styling for the colorful inputs */
 .colorful-input {
-    border: 2px solid #000000; /* Blue border */
+    border: 2px solid #837d7d; /* Blue border */
     border-radius: 0.25rem; /* Rounded corners */
     padding: 0.75rem; /* Padding inside the input */
     font-size: 1rem; /* Adjust font size */
